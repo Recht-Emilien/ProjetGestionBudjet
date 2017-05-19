@@ -1,0 +1,22 @@
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.exe.config
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\budget1.mdb
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.exe
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.pdb
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.csprojResolveAssemblyReference.cache
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Form1.resources
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Properties.Resources.resources
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.csproj.GenerateResource.Cache
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.exe
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\documents\visual studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.pdb
+\\vfiler-ad-etu.ad.unistra.fr\griedinger\Documents\Visual Studio 2015\Projects\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Form2.resources
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.exe.config
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.exe
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.pdb
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\budget1.mdb
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.exe
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\bin\Debug\ProjetGestionBudjet.pdb
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.csprojResolveAssemblyReference.cache
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Form1.resources
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Form2.resources
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.Properties.Resources.resources
+C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\obj\Debug\ProjetGestionBudjet.csproj.GenerateResource.Cache
