@@ -30,7 +30,7 @@ namespace ProjetGestionBudjet
             OleDbConnection connexion = new OleDbConnection();
             try
             {
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
                 connexion.Open();
                 OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
                 DataSet dsType = new DataSet();
@@ -66,7 +66,7 @@ namespace ProjetGestionBudjet
             if (textBox1.Text != "" )
             {
                 OleDbConnection connexion = new OleDbConnection();
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
                 connexion.Open();
                 OleDbCommand nombre = new OleDbCommand("Select count(codeType) from TypeTransaction", connexion);
                 int codeType = int.Parse(nombre.ExecuteScalar().ToString());
@@ -95,7 +95,7 @@ namespace ProjetGestionBudjet
 
             String commande = "DELETE FROM typeTransaction WHERE libType =" + '"' + cbxSupprimerType.Text + '"';
             OleDbConnection connexion = new OleDbConnection();
-            connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+            connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
             connexion.Open();
             OleDbCommand delete = new OleDbCommand(commande, connexion);
             delete.ExecuteNonQuery();
@@ -110,7 +110,7 @@ namespace ProjetGestionBudjet
             cbxSupprimerType.Items.Clear();
             OleDbConnection connexion = new OleDbConnection();
            
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
                 connexion.Open();
                 OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
                 DataSet dsType = new DataSet();

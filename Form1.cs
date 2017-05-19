@@ -29,7 +29,7 @@ namespace ProjetGestionBudjet
             OleDbConnection connexion = new OleDbConnection();
             try
             {
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
                 connexion.Open();
                 OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
                 DataSet dsType = new DataSet();
@@ -73,7 +73,7 @@ namespace ProjetGestionBudjet
             OleDbConnection connexion = new OleDbConnection();
             try
             {
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
                 connexion.Open();
                 OleDbDataAdapter daNbClient = new OleDbDataAdapter(@"SELECT nomPersonne, pnPersonne from Personne", connexion);
                 DataSet dsNbClient = new DataSet();
@@ -147,7 +147,7 @@ namespace ProjetGestionBudjet
             comboBoxType.Items.Clear();
             OleDbConnection connexion = new OleDbConnection();
 
-            connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Downloads\budget1.mdb";
+            connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
             connexion.Open();
             OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
             DataSet dsType = new DataSet();
