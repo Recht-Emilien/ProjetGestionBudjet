@@ -31,15 +31,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnActualiser = new System.Windows.Forms.Button();
             this.buttAjoutType = new System.Windows.Forms.Button();
             this.checkPercu = new System.Windows.Forms.CheckBox();
             this.checkRecette = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAjouterTrans = new System.Windows.Forms.Button();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.montantText = new System.Windows.Forms.TextBox();
             this.descriptionText = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTransaction = new System.Windows.Forms.DateTimePicker();
             this.Type = new System.Windows.Forms.Label();
             this.Montant = new System.Windows.Forms.Label();
             this.Description = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btnActualiser = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -82,11 +82,11 @@
             this.tabPage2.Controls.Add(this.checkPercu);
             this.tabPage2.Controls.Add(this.checkRecette);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnAjouterTrans);
             this.tabPage2.Controls.Add(this.comboBoxType);
             this.tabPage2.Controls.Add(this.montantText);
             this.tabPage2.Controls.Add(this.descriptionText);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.dateTransaction);
             this.tabPage2.Controls.Add(this.Type);
             this.tabPage2.Controls.Add(this.Montant);
             this.tabPage2.Controls.Add(this.Description);
@@ -99,9 +99,19 @@
             this.tabPage2.Text = "Ajout d\'une transaction";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnActualiser
+            // 
+            this.btnActualiser.Location = new System.Drawing.Point(152, 346);
+            this.btnActualiser.Name = "btnActualiser";
+            this.btnActualiser.Size = new System.Drawing.Size(74, 24);
+            this.btnActualiser.TabIndex = 13;
+            this.btnActualiser.Text = "Actualiser";
+            this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
+            // 
             // buttAjoutType
             // 
-            this.buttAjoutType.Location = new System.Drawing.Point(318, 334);
+            this.buttAjoutType.Location = new System.Drawing.Point(324, 316);
             this.buttAjoutType.Name = "buttAjoutType";
             this.buttAjoutType.Size = new System.Drawing.Size(27, 24);
             this.buttAjoutType.TabIndex = 12;
@@ -112,7 +122,7 @@
             // checkPercu
             // 
             this.checkPercu.AutoSize = true;
-            this.checkPercu.Location = new System.Drawing.Point(171, 271);
+            this.checkPercu.Location = new System.Drawing.Point(254, 243);
             this.checkPercu.Name = "checkPercu";
             this.checkPercu.Size = new System.Drawing.Size(54, 17);
             this.checkPercu.TabIndex = 11;
@@ -122,7 +132,7 @@
             // checkRecette
             // 
             this.checkRecette.AutoSize = true;
-            this.checkRecette.Location = new System.Drawing.Point(52, 272);
+            this.checkRecette.Location = new System.Drawing.Point(152, 243);
             this.checkRecette.Name = "checkRecette";
             this.checkRecette.Size = new System.Drawing.Size(64, 17);
             this.checkRecette.TabIndex = 10;
@@ -139,48 +149,50 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnAjouterTrans
             // 
-            this.button1.Location = new System.Drawing.Point(100, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 60);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAjouterTrans.Location = new System.Drawing.Point(152, 389);
+            this.btnAjouterTrans.Name = "btnAjouterTrans";
+            this.btnAjouterTrans.Size = new System.Drawing.Size(175, 60);
+            this.btnAjouterTrans.TabIndex = 8;
+            this.btnAjouterTrans.Text = "Ajouter";
+            this.btnAjouterTrans.UseVisualStyleBackColor = true;
+            this.btnAjouterTrans.Click += new System.EventHandler(this.btnAjouterTrans_Click);
             // 
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(138, 337);
+            this.comboBoxType.Location = new System.Drawing.Point(152, 319);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(166, 21);
             this.comboBoxType.TabIndex = 7;
             // 
             // montantText
             // 
-            this.montantText.Location = new System.Drawing.Point(148, 200);
+            this.montantText.Location = new System.Drawing.Point(152, 176);
             this.montantText.Name = "montantText";
             this.montantText.Size = new System.Drawing.Size(156, 20);
             this.montantText.TabIndex = 6;
             // 
             // descriptionText
             // 
-            this.descriptionText.Location = new System.Drawing.Point(146, 128);
+            this.descriptionText.Location = new System.Drawing.Point(152, 110);
             this.descriptionText.Name = "descriptionText";
             this.descriptionText.Size = new System.Drawing.Size(230, 20);
             this.descriptionText.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dateTransaction
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 52);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTransaction.CustomFormat = "dd/mm/yyyy";
+            this.dateTransaction.Location = new System.Drawing.Point(152, 46);
+            this.dateTransaction.Name = "dateTransaction";
+            this.dateTransaction.Size = new System.Drawing.Size(193, 20);
+            this.dateTransaction.TabIndex = 4;
             // 
             // Type
             // 
             this.Type.AutoSize = true;
-            this.Type.Location = new System.Drawing.Point(42, 334);
+            this.Type.Location = new System.Drawing.Point(34, 322);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(31, 13);
             this.Type.TabIndex = 3;
@@ -189,7 +201,7 @@
             // Montant
             // 
             this.Montant.AutoSize = true;
-            this.Montant.Location = new System.Drawing.Point(50, 198);
+            this.Montant.Location = new System.Drawing.Point(34, 179);
             this.Montant.Name = "Montant";
             this.Montant.Size = new System.Drawing.Size(46, 13);
             this.Montant.TabIndex = 2;
@@ -198,7 +210,7 @@
             // Description
             // 
             this.Description.AutoSize = true;
-            this.Description.Location = new System.Drawing.Point(50, 132);
+            this.Description.Location = new System.Drawing.Point(34, 113);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(60, 13);
             this.Description.TabIndex = 1;
@@ -243,16 +255,6 @@
             this.tabPage5.Text = "Recapitulatif";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // btnActualiser
-            // 
-            this.btnActualiser.Location = new System.Drawing.Point(351, 334);
-            this.btnActualiser.Name = "btnActualiser";
-            this.btnActualiser.Size = new System.Drawing.Size(74, 24);
-            this.btnActualiser.TabIndex = 13;
-            this.btnActualiser.Text = "Actualiser";
-            this.btnActualiser.UseVisualStyleBackColor = true;
-            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,11 +280,11 @@
         private System.Windows.Forms.CheckBox checkPercu;
         private System.Windows.Forms.CheckBox checkRecette;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAjouterTrans;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.TextBox montantText;
         private System.Windows.Forms.TextBox descriptionText;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTransaction;
         private System.Windows.Forms.Label Type;
         private System.Windows.Forms.Label Montant;
         private System.Windows.Forms.Label Description;

@@ -22,6 +22,7 @@ namespace ProjetGestionBudjet
         private void Form1_Load(object sender, EventArgs e)
         {
             remplirType();
+            initialisationCheckBoxClient();
         }
 
         private void remplirType()
@@ -120,7 +121,7 @@ namespace ProjetGestionBudjet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            initialisationCheckBoxClient();
+            
         }
 
         private void buttAjoutType_Click(object sender, EventArgs e)
@@ -161,7 +162,61 @@ namespace ProjetGestionBudjet
             connexion.Close();
 
         }
-    
+
+        private void btnAjouterTrans_Click(object sender, EventArgs e)
+        {
+            ajoutTransaction();
+        }
+        private void ajoutTransaction()
+        {
+            String recette = "False";
+            string percu = "False";
+            if (comboBoxType.Text == "")
+            {
+                MessageBox.Show("Un probleme est survenue");
+            }
+            else
+            {
+                OleDbConnection connexion = new OleDbConnection();
+                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
+                connexion.Open();
+
+                OleDbCommand typeCommande = new OleDbCommand("Select codeType from TypeTransaction WHERE libType = " + '"' + comboBoxType.Text + '"', connexion);
+                OleDbCommand numCommande = new OleDbCommand("SELECT count(codeTransaction) from [Transaction]",connexion);
+                MessageBox.Show(numCommande.ExecuteScalar().ToString());
+                
+                if (checkRecette.Checked == true)
+                {
+                    recette = "True";
+                }
+                else
+                {
+                    recette = "False";
+                }
+                //////////////////////////:
+                if (checkPercu.Checked == true)
+                {
+                    percu = "True";
+                }
+                else
+                {
+                    percu = "False";
+                }
+                
+                int newCodeTransaction = int.Parse(numCommande.ExecuteScalar().ToString()) + 1;
+                int newCodeType = int.Parse(typeCommande.ExecuteScalar().ToString());
+                int newPrix = int.Parse(montantText.Text);
+                string newDescription = descriptionText.Text;
+                string newDate = dateTransaction.Value.ToShortDateString();
+                MessageBox.Show(newDate);
+                String commande = "Insert into [Transaction] (codeTransaction,dateTransaction,description,montant,recetteON,percuON,type)  VALUES (" + newCodeTransaction + ",#" + dateTransaction.Value.ToString() +"#," + '"'+descriptionText.Text+ '"' + "," + int.Parse(montantText.Text) + ","+ recette +"," + percu +","+ newCodeType+")";
+                OleDbCommand insert = new OleDbCommand(commande, connexion);
+                insert.ExecuteNonQuery();
+                //  MessageBox.Show("Le type " + textBox1.Text + " a été ajoutée");
+                connexion.Close();
+            }
+           
+        }
     }
     
     
