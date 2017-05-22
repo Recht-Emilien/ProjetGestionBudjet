@@ -13,6 +13,8 @@ namespace ProjetGestionBudjet
 {
     public partial class Form2 : Form
     {
+        string provider2 = "";
+        string provider = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
         public Form2()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace ProjetGestionBudjet
             OleDbConnection connexion = new OleDbConnection();
             try
             {
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\budget1.mdb";
+                connexion.ConnectionString = provider;
                 connexion.Open();
                 OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
                 DataSet dsType = new DataSet();
@@ -66,18 +68,12 @@ namespace ProjetGestionBudjet
             if (textBox1.Text != "" )
             {
                 OleDbConnection connexion = new OleDbConnection();
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\budget1.mdb";
+                connexion.ConnectionString = provider;
                 connexion.Open();
-                OleDbCommand nombre = new OleDbCommand("Select count(codeType) from TypeTransaction", connexion);
+                OleDbCommand nombre = new OleDbCommand("Select max(codeType) from TypeTransaction", connexion);
                 int codeType = int.Parse(nombre.ExecuteScalar().ToString());
                 
                 codeType++;
-
-
-
-
-
-
 
                 String commande = "Insert into TypeTransaction (codeType, libType) VALUES (" + codeType + "," + '"' + textBox1.Text + '"'  +")"  ;
                 OleDbCommand insert = new OleDbCommand(commande, connexion);
@@ -95,7 +91,7 @@ namespace ProjetGestionBudjet
 
             String commande = "DELETE FROM typeTransaction WHERE libType =" + '"' + cbxSupprimerType.Text + '"';
             OleDbConnection connexion = new OleDbConnection();
-            connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\budget1.mdb";
+            connexion.ConnectionString = provider;
             connexion.Open();
             OleDbCommand delete = new OleDbCommand(commande, connexion);
             delete.ExecuteNonQuery();
@@ -110,7 +106,7 @@ namespace ProjetGestionBudjet
             cbxSupprimerType.Items.Clear();
             OleDbConnection connexion = new OleDbConnection();
            
-                connexion.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\budget1.mdb";
+                connexion.ConnectionString = provider;
                 connexion.Open();
                 OleDbDataAdapter daType = new OleDbDataAdapter(@"SELECT libType FROM TypeTransaction", connexion);
                 DataSet dsType = new DataSet();
