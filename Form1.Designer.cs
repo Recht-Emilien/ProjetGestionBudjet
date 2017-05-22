@@ -48,6 +48,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.newNomTxt = new System.Windows.Forms.TextBox();
+            this.newPrenomTxt = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +81,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.newPrenomTxt);
+            this.tabPage2.Controls.Add(this.newNomTxt);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.btnActualiser);
             this.tabPage2.Controls.Add(this.buttAjoutType);
             this.tabPage2.Controls.Add(this.checkPercu);
@@ -141,7 +149,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(577, 69);
+            this.button2.Location = new System.Drawing.Point(587, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 100);
             this.button2.TabIndex = 9;
@@ -255,6 +263,38 @@
             this.tabPage5.Text = "Recapitulatif";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(528, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nom :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(528, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Prénom :";
+            // 
+            // newNomTxt
+            // 
+            this.newNomTxt.Location = new System.Drawing.Point(587, 155);
+            this.newNomTxt.Name = "newNomTxt";
+            this.newNomTxt.Size = new System.Drawing.Size(100, 20);
+            this.newNomTxt.TabIndex = 16;
+            // 
+            // newPrenomTxt
+            // 
+            this.newPrenomTxt.Location = new System.Drawing.Point(587, 198);
+            this.newPrenomTxt.Name = "newPrenomTxt";
+            this.newPrenomTxt.Size = new System.Drawing.Size(100, 20);
+            this.newPrenomTxt.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +333,10 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btnActualiser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox newPrenomTxt;
+        private System.Windows.Forms.TextBox newNomTxt;
     }
 }
 
