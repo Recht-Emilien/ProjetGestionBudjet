@@ -13,7 +13,6 @@ namespace ProjetGestionBudjet
 {
     public partial class Form2 : Form
     {
-        string provider2 = "";
         string provider = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dark_\Desktop\ProjetGestionBudget\ProjetGestionBudjet\ProjetGestionBudjet\budget1.mdb";
         public Form2()
         {
